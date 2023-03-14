@@ -11,7 +11,7 @@ app.get('/', function(req, res){
 
 // 3
 app.get('/about', function(req, res){
-res.send('<h2><i>Darvai Olesia</i></h2>');
+res.send('<h2><i>Anastasiia Tabakharniuk</i></h2>');
 });
 
 
@@ -24,7 +24,7 @@ app.use((err, req, res, next)=>{
 
 // *
 const fs = require ('fs');
-app.get ('/aboutMe', (req, res) => {
+app.get ('/Information', (req, res) => {
     fs.readFile('index.html', 'utf-8', (err, html) => {
         if (err) {
             console.log(err);
@@ -37,7 +37,7 @@ app.get ('/aboutMe', (req, res) => {
 
 // //  **
 app.use (express.static('image'));
-app.get ('/png', (req, res) => {
+app.get ('/ILikeDogs', (req, res) => {
     res.sendFile(__dirname + '/image/index.html');
 });
 
